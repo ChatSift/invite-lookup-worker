@@ -1,0 +1,22 @@
+name = "invite-lookup"
+type = "webpack"
+account_id = "ya gotta fill this out"
+compatibility_date = "2021-09-26"
+workers_dev = true
+webpack_config = "webpack.config.cjs"
+
+kv_namespaces = [ 
+  { binding = "INVITES", id = "FILL THIS OUT" }
+]
+
+[build]
+command = "pnpm run pack"
+
+[build.upload]
+format = "service-worker"
+
+[env.development]
+name = "invite-lookup-dev"
+
+[env.development.build]
+command = "pnpm run dev"
